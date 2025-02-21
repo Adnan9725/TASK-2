@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Sidebar -->
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-gray-800 text-white p-6">
+            <div class="text-2xl font-bold">Dashboard</div>
+            <ul class="mt-6">
+                <li class="mb-4">
+                    <a href="#" class="hover:text-gray-300">Home</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:text-gray-300">Analytics</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:text-gray-300">Settings</a>
+                </li>
+                <li class="mb-4">
+                    <a href="#" class="hover:text-gray-300">Logout</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-6">
+                <div class="text-3xl font-semibold">Welcome to Your Dashboard</div>
+                <div class="flex items-center space-x-4">
+                    <div class="text-gray-600">ADNAN ANSARI</div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-xl font-semibold">Total Sales</div>
+                    <div class="mt-4 text-3xl font-bold">$4,580</div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-xl font-semibold">New Users</div>
+                    <div class="mt-4 text-3xl font-bold">1,234</div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <div class="text-xl font-semibold">Orders Today</div>
+                    <div class="mt-4 text-3xl font-bold">65</div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="mt-12 bg-white shadow-md rounded-lg p-6">
+                <div class="text-xl font-semibold">Recent Activity</div>
+                <ul class="mt-4">
+                    <li class="flex justify-between py-2 border-b">
+                        <div>John made a purchase</div>
+                        <div class="text-gray-500">2 minutes ago</div>
+                    </li>
+                    <li class="flex justify-between py-2 border-b">
+                        <div>Anna signed up</div>
+                        <div class="text-gray-500">5 minutes ago</div>
+                    </li>
+                    <li class="flex justify-between py-2 border-b">
+                        <div>Michael added new items</div>
+                        <div class="text-gray-500">10 minutes ago</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind CSS responsive utilities
+        if (window.innerWidth < 768) {
+            document.querySelector('div.w-64').classList.add('w-full');
+            document.querySelector('div.flex-1').classList.add('w-full');
+        }
+    </script>
+</body>
+
+</html>
